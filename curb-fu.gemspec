@@ -16,6 +16,8 @@ Gem::Specification.new do |s|
   s.executables     = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths   = ["lib"]
 
+  s.required_ruby_version = '>= 2.4'
+
   s.add_dependency('curb',   '>= 0.9.3.0')
   s.add_dependency('rack-test',   '>= 0.2.0')
 
