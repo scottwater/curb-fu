@@ -6,7 +6,7 @@ describe "module inclusion" do
     class Tester
       include CurbFu::ObjectExtensions
     end
-    
+
     Tester.new.should respond_to(:to_param_pair)
   end
 end
@@ -72,7 +72,7 @@ describe Integer do
   end
   describe "to_param_pair" do
     it "should return a stringified version of itself, using the provided key" do
-      5.to_param_pair("fixnum").should == "fixnum=5"
+      5.to_param_pair("integer").should == "integer=5"
     end
   end
 end
